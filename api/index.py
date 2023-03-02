@@ -10,6 +10,7 @@ class Item(BaseModel):
     description: Union[str, None] = None
     price: float
     tax: Union[float, None] = None
+    price_with_tax: Union[float, None] = None
 
 
 fake_data = {
