@@ -33,6 +33,7 @@ async def get_items():
         description=fake_data["description"],
         price=fake_data["price"],
         tax=fake_data["tax"],
+        price_with_tax=fake_data["price"] + fake_data["price"] * fake_data["tax"],
     )
 
 
