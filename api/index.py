@@ -35,7 +35,7 @@ async def get_items():
     )
 
 
-@app.post("/items")
+@app.post("/items", response_model=Item)
 async def create_item(item: Item):
     item_dict = item.dict()
     if item.tax:
