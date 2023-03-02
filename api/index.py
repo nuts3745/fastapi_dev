@@ -16,8 +16,8 @@ class Item(BaseModel):
 fake_data = {
     "name": "Foo",
     "description": "An optional description",
-    "price": 45.2,
-    "tax": 3.5,
+    "price": 12345.2,
+    "tax": 0.5,
 }
 
 
@@ -40,6 +40,6 @@ async def get_items():
 async def create_item(item: Item):
     item_dict = item.dict()
     if item.tax:
-        price_with_tax = item.price + item.tax
+        price_with_tax = item.price + item.price * item.tax
         item_dict.update({"price_with_tax": price_with_tax})
     return item_dict
