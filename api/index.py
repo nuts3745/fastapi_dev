@@ -2,7 +2,7 @@ from fastapi.applications import FastAPI
 from pydantic import BaseModel
 from typing import Union
 
-app = FastAPI(root_path="/api/v1", title="FastAPI Demo")
+app = FastAPI(title="FastAPI Demo")
 
 
 class Item(BaseModel):
